@@ -1,0 +1,4 @@
+GET http://cellebi.pub:3000/banner
+Accept: application/json
+
+###
