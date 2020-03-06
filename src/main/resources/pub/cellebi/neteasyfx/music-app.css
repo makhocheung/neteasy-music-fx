@@ -1,0 +1,316 @@
+
+.debug {
+    -fx-background-color: #9d2d26;
+}
+
+/****** debug ***/
+
+
+.root {
+    main-color: #bc2f2e;
+}
+
+.label-icon {
+    -fx-fill: rgb(198, 46, 46);
+}
+
+.meta-cell:hover {
+    -fx-opacity: 0.85;
+}
+
+.meta-cell:pressed {
+    -fx-scale-x: 0.99;
+    -fx-scale-y: 0.99;
+}
+
+
+.player-pane {
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: rgb(228, 228, 231);
+    -fx-background-color: white;
+}
+
+.player-pane .thumb {
+    -fx-background-color: white;
+    -fx-border-color: #e5e5e5;
+    -fx-border-radius: 50%;
+    -fx-pref-height: 16.5;
+    -fx-pref-width: 16.5;
+}
+
+.player-pane .track {
+    -fx-pref-height: 0.5;
+    -fx-background-color: #e5e5e5;
+}
+
+.player-pane .track:hover {
+    -fx-cursor: hand;
+    -fx-pref-height: 0.5;
+    -fx-background-color: #e5e5e5;
+}
+
+.player-button {
+    -fx-background-color: rgb(223, 59, 59);
+    -fx-background-radius: 60%;
+}
+
+.player-button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.volume-button {
+    -fx-background-color: transparent;
+}
+
+
+.player-head {
+    -fx-background-color: #e5e5e5;
+}
+
+/* explore */
+
+.explore-pane {
+    -fx-background-color: rgb(250, 250, 252);
+}
+
+.explore-pane:focused {
+    -fx-background-insets: 0;
+}
+
+.scroll-bar:vertical {
+    -fx-pref-width: 12;
+}
+
+.scroll-bar:vertical .decrement-button, .increment-button {
+    -fx-pref-height: 0;
+    visibility: hidden;
+}
+
+.scroll-bar:vertical .decrement-arrow, .increment-arrow {
+    visibility: hidden;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: rgb(250, 250, 252)
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgb(200, 201, 204);
+    -fx-background-radius: 60;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgb(173, 175, 178);
+}
+
+
+.explore-pane .explore-content {
+    -fx-background-color: rgb(250, 250, 252);
+}
+
+.carousel > .button:hover {
+    -fx-background-color: rgba(229, 229, 229, 0.18);
+}
+
+.carousel > .button {
+    -fx-background-color: rgba(255, 255, 255, 0);
+}
+
+.carousel .banner {
+    -fx-background-color: white;
+}
+
+.carousel .banner .image-view:hover {
+    -fx-opacity: 0.8;
+}
+
+.search-input {
+    -fx-border-color: #bfbfbf;
+    -fx-pref-height: 40;
+    -fx-background-color: white;
+}
+
+.search-pane {
+    -fx-background-color: rgb(250, 250, 252);
+}
+
+.search-pane .list-view {
+    -fx-background-color: white;
+    -fx-border-width: 0;
+}
+
+.search-pane .list-cell {
+    -fx-pref-height: 45;
+}
+
+.search-pane .list-cell:selected {
+    -fx-background-color: gray;
+}
+
+.search-pane .list-cell:empty {
+    -fx-background-color: white;
+}
+
+.hot-search .button {
+    -fx-background-color: transparent;
+    -fx-border-color: gray;
+    -fx-border-radius: 30%;
+}
+
+.hot-search .button:pressed {
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+    -fx-background-radius: 30%;
+}
+
+.latest-music-pane .list-view {
+    -fx-background-color: transparent;
+}
+
+.latest-music-pane .list-cell:hover {
+    -fx-background-color: rgb(236, 236, 237);
+}
+
+.latest-music-pane .list-cell:empty {
+    -fx-background-color: transparent;
+}
+
+.latest-music-pane .list-cell:selected {
+    -fx-background-color: rgb(227, 227, 229);
+}
+
+.latest-music-pane .list-cell:selected .label {
+    -fx-text-fill: black;
+}
+
+.latest-music-pane .list-cell:selected:hover {
+    -fx-background-color: rgb(217, 217, 219);
+}
+
+
+/* mv pane */
+.mv-pane {
+    -fx-background-color: rgb(250, 250, 252);
+    -fx-background-insets: 0;
+    -fx-padding: 20 30 0 30;
+}
+
+.mv-pane .viewport {
+    -fx-background-color: rgb(250, 250, 252);
+}
+
+.song-sheet-pane {
+    -fx-background-color: rgb(250, 250, 252);
+}
+
+.song-sheet-pane .list-view {
+    -fx-background-color: white;
+    -fx-border-width: 0;
+}
+
+.song-sheet-pane .list-cell {
+    -fx-pref-height: 45;
+}
+
+.song-sheet-pane .list-cell:selected {
+    -fx-background-color: gray;
+}
+
+.song-sheet-pane .list-cell:empty {
+    -fx-background-color: white;
+}
+
+
+.column-header-background {
+    visibility: hidden;
+    -fx-pref-height: 0
+}
+
+
+.table-view {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view .table-column:even {
+
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+.table-view .table-row-cell {
+    -fx-pref-height: 40;
+    -fx-padding: 0 0 0 10;
+}
+
+.table-view:row-selection .table-row-cell:hover {
+    -fx-background-color: rgb(242, 242, 243);
+}
+
+.table-view .table-row-cell:focused:selected {
+    -fx-background-color: rgb(232, 232, 234);
+}
+
+.table-view .table-row-cell:focused:selected .text {
+}
+
+.table-view:row-selection .table-row-cell:focused:selected:hover {
+    -fx-background-color: rgb(222, 222, 224);
+}
+
+
+.table-view .table-row-cell:even {
+    -fx-background-color: rgb(244, 244, 246);
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: rgb(250, 250, 252);
+}
+
+.song-cell .text {
+    -fx-fill: black;
+}
+
+.artist-cell .text {
+    -fx-fill: rgb(153, 153, 153);
+}
+
+.album-cell .text {
+    -fx-fill: rgb(153, 153, 153);
+}
+
+.time-cell .text {
+    -fx-fill: rgb(153, 153, 153);
+}
+
+.volume-pane {
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-border-color: rgb(206, 206, 212);
+    -fx-border-width: 0.5;
+}
+
+.volume-pane .thumb {
+    -fx-background-color: white;
+    -fx-border-color: #e5e5e5;
+    -fx-border-radius: 50%;
+    -fx-pref-height: 16.5;
+    -fx-pref-width: 16.5;
+}
+
+.volume-pane .track {
+    -fx-pref-height: 0.5;
+    -fx-background-color: #e5e5e5;
+}
+
+.volume-pane .track:hover {
+    -fx-cursor: hand;
+    -fx-pref-height: 0.5;
+    -fx-background-color: #e5e5e5;
+}
+
+.volume-pane .slider{
+    -fx-background-color: transparent;
+}

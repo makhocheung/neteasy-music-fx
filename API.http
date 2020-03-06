@@ -1,4 +1,4 @@
-GET http://cellebi.pub:3000/banner
+GET http://cellebi.pub:3000/dj/program/detail?id=2067274091
 Accept: application/json
 
 ###
