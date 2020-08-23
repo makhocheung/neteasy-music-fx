@@ -1,6 +1,5 @@
 plugins {
     java
-    id("org.openjfx.javafxplugin") version "0.0.8"
     id("org.beryx.jlink") version "2.21.0"
     application
 }
@@ -20,17 +19,30 @@ repositories {
 dependencies {
     implementation("com.fasterxml.jackson.core", "jackson-databind", "2.10.3")
     testImplementation("junit", "junit", "4.13")
+    val jfxOptions = object {
+        val group = "org.openjfx"
+        val version = "14.0.2.1"
+        val fxModules = arrayListOf("javafx-base","javafx-controls","javafx-graphics","javafx-media","javafx-swing")
+    }
+    jfxOptions.run {
+        val osName = System.getProperty("os.name")
+        val platform = when {
+            osName.startsWith("Mac", ignoreCase = true) -> "mac"
+            osName.startsWith("Windows", ignoreCase = true) -> "win"
+            osName.startsWith("Linux", ignoreCase = true) -> "linux"
+            else -> "mac"
+        }
+        fxModules.forEach {
+            implementation("$group:$it:$version:$platform")
+        }
+    }
 }
 
-application {
-    mainClassName = "pub.cellebi.neteasyfx.MusicApp"
+application{
+    mainModule.set("neteasy.music.fx.main")
+    mainClass.set("pub.cellebi.neteasyfx.MusicApp")
     applicationDefaultJvmArgs = arrayListOf("-Dhttps.protocols=TLSv1.1",
             "-Xms50m", "-Xmx256m", "-Dsun.java2d.opengl=true", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseZGC")
-}
-
-javafx {
-    version = "14.0.2.1"
-    modules = mutableListOf("javafx.controls", "javafx.media", "javafx.swing")
 }
 
 jlink {
