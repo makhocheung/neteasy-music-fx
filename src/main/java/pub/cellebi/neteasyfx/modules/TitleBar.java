@@ -36,7 +36,7 @@ public class TitleBar extends HBox {
         svgPath.setFill(Color.rgb(167, 167, 167));
         back.setGraphic(svgPath);
         back.setStyle("-fx-background-color: transparent");
-        title.setFont(Font.font(null, FontWeight.BOLD, 13));
+        title.setFont(Font.font("Noto Sans Mono CJK SC", FontWeight.BOLD, 13));
 
         setSpacing(5);
         setAlignment(Pos.CENTER_LEFT);

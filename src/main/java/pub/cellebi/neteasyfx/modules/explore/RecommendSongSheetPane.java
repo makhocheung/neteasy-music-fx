@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.SVGPath;
+import javafx.scene.text.Font;
 import pub.cellebi.neteasyfx.service.NetService;
 import pub.cellebi.neteasyfx.modules.Line;
 import pub.cellebi.neteasyfx.utils.Util;
@@ -35,6 +36,7 @@ public class RecommendSongSheetPane extends BorderPane {
         title.setGraphic(svgPath);
         title.setText("推荐歌单");
         title.setGraphicTextGap(5);
+        title.setFont(Font.font("Noto Sans Mono CJK SC"));
         contentPane.setVgap(15);
         contentPane.setHgap(20);
         var vBox = new VBox();

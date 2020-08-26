@@ -158,7 +158,7 @@ public class SongSheetMainPane extends VBox {
         detailPane.setSpacing(10);
         header.getChildren().addAll(songSheetImage, detailPane);
         header.setSpacing(20);
-        nameLabel.setFont(Font.font(null, FontWeight.BOLD, 20));
+        nameLabel.setFont(Font.font("Noto Sans Mono CJK SC", FontWeight.BOLD, 20));
         createTimeLabel.setTextFill(Color.rgb(150, 150, 150));
         descLabel.setTextFill(Color.rgb(150, 150, 150));
     }

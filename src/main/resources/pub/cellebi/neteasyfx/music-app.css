@@ -8,6 +8,7 @@
 
 .root {
     main-color: #bc2f2e;
+    -fx-font-family: "Noto Sans Mono CJK SC";
 }
 
 .label-icon {

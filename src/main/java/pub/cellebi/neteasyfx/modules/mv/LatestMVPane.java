@@ -8,6 +8,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.SVGPath;
+import javafx.scene.text.Font;
 import pub.cellebi.neteasyfx.service.NetService;
 import pub.cellebi.neteasyfx.modules.Line;
 
@@ -36,6 +37,7 @@ public class LatestMVPane extends BorderPane {
         title.setText("最新MV");
         title.setGraphic(svgPath);
         title.setGraphicTextGap(5);
+        title.setFont(Font.font("Noto Sans Mono CJK SC"));
         var vBox = new VBox();
         vBox.getChildren().addAll(title, Line.HLine());
         vBox.setSpacing(10);
