@@ -2,12 +2,16 @@ package pub.cellebi.neteasyfx;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import pub.cellebi.neteasyfx.modules.main.MainPane;
 import pub.cellebi.neteasyfx.state.Jux;
 import pub.cellebi.neteasyfx.utils.ImageUtil;

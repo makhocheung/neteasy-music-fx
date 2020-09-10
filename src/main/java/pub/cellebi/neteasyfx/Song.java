@@ -1,5 +1,7 @@
 package pub.cellebi.neteasyfx;
 
+import java.util.Objects;
+
 public final class Song {
     public final String url;
     public final String name;

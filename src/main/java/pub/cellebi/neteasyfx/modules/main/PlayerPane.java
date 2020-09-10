@@ -11,6 +11,8 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.SVGPath;
+import javafx.scene.shape.Shape;
+import pub.cellebi.neteasyfx.modules.PlayListPane;
 import pub.cellebi.neteasyfx.modules.VolumePane;
 import pub.cellebi.neteasyfx.state.Jux;
 import pub.cellebi.neteasyfx.utils.ImageUtil;
@@ -25,11 +27,13 @@ public final class PlayerPane extends HBox {
     private final Button action;
     private final Slider playProcess;
     private final Button volume;
+    private final Button playList;
     private final SVGPath pauseSVG;
     private final SVGPath playSVG;
     private final Label song;
     private final Label artists;
     private VolumePane volumePane;
+    private PlayListPane playListPane;
 
     public PlayerPane() {
         song = new Label();
@@ -43,6 +47,7 @@ public final class PlayerPane extends HBox {
         action = new Button();
         playProcess = new Slider();
         volume = new Button();
+        playList = new Button();
 
         render();
         dataBind();
@@ -85,7 +90,14 @@ public final class PlayerPane extends HBox {
         volume.getStyleClass().add("volume-button");
         volume.setPrefSize(15, 15);
 
-        getChildren().addAll(playHead, pre, action, next, vBox, volume, Spacer.HSpacer(10));
+        var playListSvg = new SVGPath();
+        playListSvg.setContent("M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z");
+        playListSvg.setFill(Color.GRAY);
+        playList.setGraphic(playListSvg);
+        playList.getStyleClass().add("playlist-button");
+        playList.setPrefSize(15, 15);
+
+        getChildren().addAll(playHead, pre, action, next, vBox, playList, volume, Spacer.HSpacer(10));
         getStyleClass().add("player-pane");
         setPrefHeight(60);
         setSpacing(25);
@@ -143,6 +155,19 @@ public final class PlayerPane extends HBox {
             } else {
                 volumePane.show(volume, x, y);
             }
+        });
+        playList.setOnAction(e -> {
+            //var fixWidth = getWidth() - playList.getLayoutX() - playList.getWidth();
+            var bounds = playList.getBoundsInLocal();
+            var screenPoint = playList.localToScreen(bounds);
+            //var width = 300 + fixWidth;
+            var x = screenPoint.getCenterX() - 300;
+            var y = screenPoint.getMinY() - 500;
+            if (playListPane == null) {
+                playListPane = new PlayListPane();
+            }
+            playListPane.show(playList, x, y);
+
         });
         playProcess.valueProperty().addListener((o, ov, nv) -> {
             String style = String.format("-fx-background-color: linear-gradient(to right, #ec0202 %d%%, #e5e5e5 %d%%);",

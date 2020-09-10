@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 
 
-public class ImageUtil {
+public class  ImageUtil {
     private final static Path IMAGE_CACHE_PATH;
 
     static {

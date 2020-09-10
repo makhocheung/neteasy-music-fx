@@ -21,7 +21,7 @@ dependencies {
     testImplementation("junit", "junit", "4.13")
     val jfxOptions = object {
         val group = "org.openjfx"
-        val version = "14.0.2.1"
+        val version = "15"
         val fxModules = arrayListOf("javafx-base","javafx-controls","javafx-graphics","javafx-media","javafx-swing")
     }
     jfxOptions.run {
